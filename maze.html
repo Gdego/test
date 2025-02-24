@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labyrinthe</title>
+    <link rel="stylesheet" href="styles.css">
+	<div id="palette">
+		<button onclick="setCurrentType('wall')">Mur</button>
+		<button onclick="setCurrentType('obstacle')">Obstacle</button>
+		<button onclick="setCurrentType('enter')">Entrée</button>
+		<button onclick="setCurrentType('exit')">Sortie</button>
+		<button onclick="enableDeleteMode()">Supprimer</button>
+	</div>
+	<div id="roomContainer"></div>
+
+	<select id="room-selector" onchange="loadSelectedRoom()"></select>
+</head>
+<body>
+
+    <h1>Génération du Labyrinthe</h1>
+    <a href="room-editor.html">Aller à l'éditeur de rooms</a>
+<h1>Dungeon Generator</h1>
+    <label>Largeur: <input type="number" id="width" value="10" min="5"></label>
+    <label>Hauteur: <input type="number" id="height" value="10" min="5"></label>
+    <label>Nombre de rooms: <input type="number" id="numRooms" value="3" min="1"></label>
+    <<button id="generateDungeon">Générer Dungeon</button>
+
+	<button id="expandButton">Expand Dungeon</button>
+
+<canvas id="dungeonCanvas" width="800" height="800"></canvas>
+
+    
+    <div id="dungeon-container"></div>
+    <div id="mazeContainer"></div>
+	<script src="rooms.js"></script>
+    <script src="room-editor.js"></script>
+	<script src="maze.js"></script>
+
+
+
+</body>
+
+</html>
