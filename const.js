@@ -1,0 +1,1 @@
+const FACING = ['north', 'south', 'east', 'west'];

@@ -1,4 +1,3 @@
-/* === GLOBAL === */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -8,7 +7,6 @@ body {
     color: white;
 }
 
-/* === BOUTONS === */
 button {
     margin: 10px;
     padding: 10px 15px;
@@ -24,102 +22,7 @@ button:hover {
     background-color: #777;
 }
 
-/* === SECTIONS PRINCIPALES === */
-#room-management, #maze-container {
-    width: 80%;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* === ÉDITEUR DE ROOM === */
-#room-editor {
-    display: grid;
-    grid-template-columns: repeat(10, 30px);
-    grid-gap: 2px;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #444;
-    border-radius: 10px;
-}
-
-/* === STYLE DES CELLULES === */
-.cell {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    text-align: center;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.empty { background-color: white; }
-.wall { background-color: gray; }
-.exit { background-color: red; }
-.enter { background-color: blue; }
-.obstacle { background-color: orange; } /* Ajouté pour les obstacles */
-.delete-mode { background-color: black; } /* Ajouté pour l'effacement */
-
-/* === PALETTE DE COULEURS === */
-#palette {
-    margin-top: 10px;
-    display: flex;
-    gap: 5px;
-}
-
-#palette button {
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    color: white;
-}
-
-#palette .selected {
-    border: 3px solid yellow; /* Indique l'élément sélectionné */
-}
-
-.btn-wall { background-color: gray; }
-.btn-empty { background-color: white; color: black; }
-.btn-exit { background-color: red; }
-.btn-enter { background-color: blue; }
-.btn-obstacle { background-color: orange; }
-.btn-delete { background-color: black; }
-
-
-/* === AFFICHAGE DU LABYRINTHE === */
-#game-container {
-    display: grid;
-    grid-template-columns: repeat(100, 10px);
-    grid-template-rows: repeat(100, 10px);
-    gap: 1px;
-    background-color: black;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-/* === STYLE DES CELLULES DU LABYRINTHE === */
-.cell.small {
-    width: 10px;
-    height: 10px;
-}
-
-.rat { background-color: yellow; }
-.path { background-color: lightblue; } /* Zones où le rat peut se déplacer */
-.void { background-color: black; } /* Cases qui ne seront pas générées */
-.cell.locked_path {
-    background-color: #66bedb; /* Gris foncé pour mieux distinguer */
-}
-.cell.debug {
-    background-color: purple !important; /* Couleur visible pour débug */
-    border: 1px solid black; /* Pour bien voir les cases */
-}
-.debug {
-    background-color: purple !important; /* Indique les chemins générés */
-}
-#dungeonCanvas {
+canvas {
     background-color: lightgray;
     border: 1px solid black;
 }
